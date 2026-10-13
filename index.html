@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="N&G IMPORTADOS — perfumes seleccionados. Consultá disponibilidad y comprá por WhatsApp.">
+  <meta name="description" content="N&G IMPORTADOS — perfumes seleccionados. Consultá disponibilidad y comprá por WhatsApp.">
     <title>N&G IMPORTADOS | Perfumería selecta</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
@@ -63,6 +63,19 @@
     .price{font-weight:bold;color:var(--gold-light);font-size:1rem}
     .small-btn{padding:10px 12px;border:1px solid var(--line);color:var(--gold-light);font-size:.78rem}
     .small-btn:hover{background:var(--gold);color:#17120a}
+    
+    /* Estilos para los precios tachados (descuentos) */
+    .price-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #888888;
+      font-size: 0.85em;
+    }
+
     .note{color:var(--muted);font-size:.82rem;line-height:1.6;margin-top:18px}
     .about{background:#100e0b;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px}
@@ -102,9 +115,9 @@
           <div class="actions"><a class="btn" href="#catalogo">Explorar perfumes ↘</a><a class="btn btn-outline" href="#contacto">Contactanos</a></div>
         </div>
         <div class="hero-visual">
-  <img src="ng importados.png" alt="Perfumes N&G Importados" style="width:100%; height:100%; object-fit:cover; display:block;">
-  <div class="hero-caption">Selección · Estilo · Carácter</div>
-</div>
+          <img src="ng importados.png" alt="Perfumes N&G Importados" style="width:100%; height:100%; object-fit:cover; display:block;">
+          <div class="hero-caption">Selección · Estilo · Carácter</div>
+        </div>
       </div>
     </section>
 
@@ -122,10 +135,21 @@
         </div>
         <div class="products">
 
-          <!-- 1. Honor and Glory -->
+          <!-- 1. Honor and Glory (Con descuento aplicado) -->
           <article class="product" data-category="unisex">
             <div class="product-photo"><img src="honor and glory.png" alt="Honor and Glory" loading="lazy"></div>
-            <div class="product-info"><div class="tag">Unisex · Lattafa</div><h3>Honor and Glory</h3><p>Notas cálidas, gourmand con piña, crema y especias.</p><div class="product-bottom"><span class="price">$45.000</span><a class="small-btn order-link" data-product="Honor and Glory" href="#contacto">Consultar ↗</a></div></div>
+            <div class="product-info">
+              <div class="tag">Unisex · Lattafa</div>
+              <h3>Honor and Glory</h3>
+              <p>Notas cálidas, gourmand con piña, crema y especias.</p>
+              <div class="product-bottom">
+                <div class="price-container">
+                  <span class="old-price">$45.000</span>
+                  <span class="price">$41.000</span>
+                </div>
+                <a class="small-btn order-link" data-product="Honor and Glory" href="#contacto">Consultar ↗</a>
+              </div>
+            </div>
           </article>
 
           <!-- 2. Liquid brun -->
